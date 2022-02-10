@@ -12,7 +12,8 @@ pre-train dataset은 서울대,서울 삼성,서울 아산,부민 병원 홈페�
 ### ✈️ git lfs가 요구됩니다.
  12epoch_multilingual_model폴더의 pytorch_model.bin 파일은 깃허브에 올릴수있는 100MB 제한을 넘어섰기 때문에 lfs를 통해 push하였습니다.
  따라서 pull을 할때에도 lfs를 해줘야 하기 때문에 - https://git-lfs.github.com/ - 에서 lfs를 설치하여 주시길 바랍니다.
- ⛔lfs를 사용하지 않고 clone을 하게되면 모델이 정상적으로 작동을 안합니다.⛔
+ 
+ ⛔lfs를 사용하지 않고 clone을 하게되면 모델이 정상적으로 작동을 하지않습니다.⛔
  
  ```bash
 $ git clone https://github.com/ma-an-jong/diagnostic.git
