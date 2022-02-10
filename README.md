@@ -49,6 +49,9 @@ score 측정은 Model클래스 내부의 cos_sim 메소드를 이용합니다.
 >>> score = st.cos_sim(A,B)
 ```
 
+## QA
+ - How to reach me : alswhd1113@gmail.com
+
 ## Reference
 - [Huggingface Transformers](https://github.com/huggingface/transformers)
 - [Huggingface Models](https://huggingface.co/sentence-transformers/stsb-xlm-r-multilingual)
