@@ -9,13 +9,13 @@ pre-train dataset은 서울대,서울 삼성,서울 아산,부민 병원 홈페�
 3. pip install annoy
 
 ### 1. transformers
-# Tokenizer를 얻기위해 사용됩니다.  허깅페이스의 'sentence-transformers/stsb-xlm-r-multilingual' Tokenizer 를 사용합니다.
+ Tokenizer를 얻기위해 사용됩니다.  허깅페이스의 'sentence-transformers/stsb-xlm-r-multilingual' Tokenizer 를 사용합니다.
 
 ### 2. sentence_transformers
-# 사전학습한 bert모델을 local 경로를 통해 가져옵니다. 문장 벡터 계산을 위한 pooling과 함께 SentenceTransformer를 생성합니다.
+ 사전학습한 bert모델을 local 경로를 통해 가져옵니다. 문장 벡터 계산을 위한 pooling과 함께 SentenceTransformer를 생성합니다.
 
 ### 3. annoy
-# 사용자가 질병 정보를 입력하면 문장 벡터 유사도 계산을 위한 annoy 라이브러리를 필요로 합니다.
+ 사용자가 질병 정보를 입력하면 문장 벡터 유사도 계산을 위한 annoy 라이브러리를 필요로 합니다.
 
 ### How to Use
 
