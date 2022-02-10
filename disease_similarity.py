@@ -5,8 +5,7 @@ from numpy.linalg import norm
 from annoy import AnnoyIndex
 
 class Model():
-    
-    def __init__():
+    def __init__(self):
         bert = models.Transformer('12epoch_multilingual_model')
         pooling = models.Pooling(bert.get_word_embedding_dimension(), 'cls')
         self.model =  SentenceTransformer(modules=[bert, pooling])
@@ -19,7 +18,7 @@ class Model():
     def cos_sim(A, B):
         return dot(A, B)/(norm(A)*norm(B))
 
-    def get_indices(question,n=5):
+    def get_indices(self,question,n=5):
         output = self.model.encode(question)
         return self.annoy_index.get_nns_by_vector(output, n)
 
