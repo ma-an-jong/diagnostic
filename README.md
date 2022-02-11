@@ -18,6 +18,7 @@ pre-train dataset은 서울대,서울 삼성,서울 아산,부민 병원 홈페�
  ```bash
 $ git clone https://github.com/ma-an-jong/diagnostic.git
 $ git lfs install
+$ cd diagnostic
 $ git lfs pull
 ```
 
