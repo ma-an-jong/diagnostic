@@ -9,7 +9,8 @@ class Model():
         bert = models.Transformer('12epoch_multilingual_model')
         pooling = models.Pooling(bert.get_word_embedding_dimension(), 'cls')
         self.model =  SentenceTransformer(modules=[bert, pooling])
-        self.tokenizer = AutoTokenizer.from_pretrained('sentence-transformers/stsb-xlm-r-multilingual')
+        #sentence-transformers/stsb-xlm-r-multilingual
+        self.tokenizer = AutoTokenizer.from_pretrained('./output/12epoch_multilingual_model')
         
         length_of_vector = 768
         self.annoy_index = AnnoyIndex(length_of_vector, 'angular')
