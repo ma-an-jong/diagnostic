@@ -4,17 +4,19 @@ from numpy import dot
 from numpy.linalg import norm
 from annoy import AnnoyIndex
 
-class Model():
+#model_path : pre-trained model directory path
+#annoy_path : annoy file path
+class Model(model_directory_path,annoy_path):
     def __init__(self):
-        bert = models.Transformer('12epoch_multilingual_model')
+        bert = models.Transformer(model_directory_path)
         pooling = models.Pooling(bert.get_word_embedding_dimension(), 'cls')
         self.model =  SentenceTransformer(modules=[bert, pooling])
         #sentence-transformers/stsb-xlm-r-multilingual
-        self.tokenizer = AutoTokenizer.from_pretrained('./output/12epoch_multilingual_model')
+        self.tokenizer = AutoTokenizer.from_pretrained(model_directory_path)
         
         length_of_vector = 768
         self.annoy_index = AnnoyIndex(length_of_vector, 'angular')
-        self.annoy_index.load('angular_sentence_transformer.annoy')
+        self.annoy_index.load(annoy_path)
 
     def cos_sim(A, B):
         return dot(A, B)/(norm(A)*norm(B))
