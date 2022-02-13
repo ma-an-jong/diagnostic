@@ -35,8 +35,9 @@ $ git lfs pull
 
 ```python
 >>> from diagnostic.disease_similarity import Model
->>> st = Model()
->>> sentence = 발목이 부었어요"
+>>> model_path = 'model_directory_path'
+>>> st = Model(model_path)
+>>> sentence = "발목이 부었어요"
 >>> indices = st.get_indices(sentence)
 ```
 indices는 DB에 존재하는 id값을 리턴합니다. 질병에 대한 조회를 원할때는 id값을 key로 사용하여 조회합니다.
@@ -49,10 +50,12 @@ score 측정은 Model클래스 내부의 cos_sim 메소드를 이용합니다.
 >>> B = st.model.encode(target.증상)
 >>> score = st.cos_sim(A,B)
 ```
+
 ## 개선점
  1. pre-train dataset이 부족하다.
  2. 의학 전문 단어 또는 은어들을 tokenizer에 추가 해야한다.
  3. 단순 벡터 유사도 비교가 아닌 QA를 통한 학습을 한뒤, 증상을 입력하면 더 좋은 모델이 나올것같다.
+
 ## QA
  - How to reach me : alswhd1113@gmail.com
 
