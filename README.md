@@ -53,12 +53,12 @@ score 측정은 Model클래스 내부의 cos_sim 메소드를 이용합니다.
 >>> score = st.cos_sim(A,B)
 ```
 
-## 개선점
+## Retrospection
  1. pre-train dataset이 부족하다.
  2. 의학 전문 단어 또는 은어들을 tokenizer에 추가 해야한다.
  3. 단순 벡터 유사도 비교가 아닌 QA를 통한 학습을 한뒤, 증상을 입력하면 더 좋은 모델이 나올것같다.
 
-## QA
+## Feedback
  - How to reach me : alswhd1113@gmail.com
 
 ## Reference
